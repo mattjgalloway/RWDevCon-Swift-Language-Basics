@@ -14,7 +14,6 @@
 		1E732BCE1A17F69F00318C3C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E732BCC1A17F69F00318C3C /* LaunchScreen.xib */; };
 		1E732BDA1A17F69F00318C3C /* TicTacToeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E732BD91A17F69F00318C3C /* TicTacToeTests.swift */; };
 		1E732BE41A17FF9B00318C3C /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E732BE31A17FF9B00318C3C /* Board.swift */; };
-		1E732BE61A18034300318C3C /* DataStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E732BE51A18034300318C3C /* DataStructures.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +38,6 @@
 		1E732BD81A17F69F00318C3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E732BD91A17F69F00318C3C /* TicTacToeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeTests.swift; sourceTree = "<group>"; };
 		1E732BE31A17FF9B00318C3C /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
-		1E732BE51A18034300318C3C /* DataStructures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStructures.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +82,6 @@
 				1E732BC31A17F69F00318C3C /* AppDelegate.swift */,
 				1E732BC51A17F69F00318C3C /* ViewController.swift */,
 				1E732BE31A17FF9B00318C3C /* Board.swift */,
-				1E732BE51A18034300318C3C /* DataStructures.swift */,
 				1E732BC71A17F69F00318C3C /* Main.storyboard */,
 				1E732BCA1A17F69F00318C3C /* Images.xcassets */,
 				1E732BCC1A17F69F00318C3C /* LaunchScreen.xib */,
@@ -219,7 +216,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E732BC61A17F69F00318C3C /* ViewController.swift in Sources */,
-				1E732BE61A18034300318C3C /* DataStructures.swift in Sources */,
 				1E732BC41A17F69F00318C3C /* AppDelegate.swift in Sources */,
 				1E732BE41A17FF9B00318C3C /* Board.swift in Sources */,
 			);
@@ -413,6 +409,7 @@
 				1E732BDF1A17F69F00318C3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1E732BE01A17F69F00318C3C /* Build configuration list for PBXNativeTarget "TicTacToeTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +418,7 @@
 				1E732BE21A17F69F00318C3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

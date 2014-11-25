@@ -9,8 +9,6 @@
 import UIKit
 
 protocol BoardDelegate {
-  func board(board: Board, didPressPosition position: Position)
-  func board(board: Board, playerAtPosition position: Position) -> Player?
 }
 
 class Board: UIView {
@@ -39,18 +37,9 @@ class Board: UIView {
     UIRectFill(CGRectMake(self.cellWidth * 2, 0, 1, height))
     UIRectFill(CGRectMake(0, self.cellHeight, width, 1))
     UIRectFill(CGRectMake(0, self.cellHeight * 2, width, 1))
-
-    // Draw turns
-    for row in 0..<3 {
-      for col in 0..<3 {
-        let position = Position(column: col, row: row)
-        if let player = self.delegate?.board(self, playerAtPosition: position) {
-          self.drawPlayer(player, atPosition: position)
-        }
-      }
-    }
   }
 
+  /*
   private func drawPlayer(player: Player, atPosition position: Position) {
     var image: NSString!
     switch player {
@@ -85,5 +74,6 @@ class Board: UIView {
       self.delegate?.board(self, didPressPosition: Position(column: col, row: row))
     }
   }
+  */
 
 }
