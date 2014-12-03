@@ -31,10 +31,10 @@ struct Position: Hashable {
   }
 
   var hashValue: Int {
-    return row * column
+    return column * 10 + row
   }
 }
 
 func ==(lhs: Position, rhs: Position) -> Bool {
-  return lhs.row == rhs.row && lhs.column == rhs.column
+  return lhs.column == rhs.column && lhs.row == rhs.row
 }
