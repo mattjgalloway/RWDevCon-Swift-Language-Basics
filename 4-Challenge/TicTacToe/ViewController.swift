@@ -101,9 +101,7 @@ class ViewController: UIViewController {
         self.reset()
       })
       self.presentViewController(alert, animated: true, completion: nil)
-    }
-
-    if turns.count == 9 {
+    } else if turns.count == 9 {
       println("Game end - no winner")
 
       let alert = UIAlertController(title: "Too bad", message: "No winner", preferredStyle: .Alert)
