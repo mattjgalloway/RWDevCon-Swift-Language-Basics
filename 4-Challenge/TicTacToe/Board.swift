@@ -52,7 +52,7 @@ class Board: UIView {
   }
 
   private func drawPlayer(player: Player, atPosition position: Position) {
-    var image: NSString!
+    var image: NSString
     switch player {
     case .X:
       image = "X"
