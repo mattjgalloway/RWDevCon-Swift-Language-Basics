@@ -135,14 +135,14 @@ This sets a variable called 'count' local to the if-statement. The if-statement 
 
 Type:
 
-    let tuple: (String, Int) = ("RWDevCon", 1000)
+    let tuple: (String, Int) = ("RWDevCon", 180)
     println("\(tuple.0), \(tuple.1)")
 
 This is a tuple. It’s a collection of values in a lightweight data structure. The data structure doesn’t need to be defined upfront like you would have done with a class in Objective-C.
 
 Type:
 
-    let namedTuple: (a: String, b: Int) = ("RWDevCon", 1000)
+    let namedTuple: (a: String, b: Int) = ("RWDevCon", 180)
     println("\(namedTuple.a), \(namedTuple.b)")
 
 You can also name the values of a tuple.

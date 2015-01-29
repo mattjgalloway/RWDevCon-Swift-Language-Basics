@@ -45,10 +45,10 @@ if let numberOfAnimal: Int = farmAnimals[animal] {
   println("I have \(numberOfAnimal) \(animal)s")
 }
 
-let tuple: (String, Int) = ("RWDevCon", 1000)
+let tuple: (String, Int) = ("RWDevCon", 180)
 println("\(tuple.0), \(tuple.1)")
 
-let namedTuple: (a: String, b: Int) = ("RWDevCon", 1000)
+let namedTuple: (a: String, b: Int) = ("RWDevCon", 180)
 println("\(namedTuple.a), \(namedTuple.b)")
 
 for (key: String, value: Int) in farmAnimals {
