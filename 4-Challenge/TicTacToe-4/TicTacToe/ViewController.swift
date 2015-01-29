@@ -85,32 +85,40 @@ class ViewController: UIViewController {
     }
 
     if rowWin || columnWin || diagonalAWin || diagonalBWin {
-      println("Winner!")
-
-      var playerString = ""
-      switch lastMove.player {
-      case .X:
-        playerString = "X"
-      case .O:
-        playerString = "O"
-      }
-
-      let alert = UIAlertController(title: "Winner!", message: "\(playerString) has won", preferredStyle: .Alert)
-      alert.addAction(UIAlertAction(title: "New Game", style: .Default) {
-        (alert: UIAlertAction!) -> Void in
-        self.reset()
-      })
-      self.presentViewController(alert, animated: true, completion: nil)
+      showGameWon(lastMove.player)
     } else if turns.count == 9 {
-      println("Game end - no winner")
-
-      let alert = UIAlertController(title: "Too bad", message: "No winner", preferredStyle: .Alert)
-      alert.addAction(UIAlertAction(title: "New Game", style: .Default) {
-        (alert: UIAlertAction!) -> Void in
-        self.reset()
-        })
-      self.presentViewController(alert, animated: true, completion: nil)
+      showGameEnd()
     }
+  }
+
+  private func showGameWon(player: Player) {
+    println("Winner!")
+
+    var playerString = ""
+    switch player {
+    case .X:
+      playerString = "X"
+    case .O:
+      playerString = "O"
+    }
+
+    let alert = UIAlertController(title: "Winner!", message: "\(playerString) has won", preferredStyle: .Alert)
+    alert.addAction(UIAlertAction(title: "New Game", style: .Default) {
+      (alert: UIAlertAction!) -> Void in
+      self.reset()
+      })
+    self.presentViewController(alert, animated: true, completion: nil)
+  }
+
+  private func showGameEnd() {
+    println("Game end - no winner")
+
+    let alert = UIAlertController(title: "Too bad", message: "No winner", preferredStyle: .Alert)
+    alert.addAction(UIAlertAction(title: "New Game", style: .Default) {
+      (alert: UIAlertAction!) -> Void in
+      self.reset()
+      })
+    self.presentViewController(alert, animated: true, completion: nil)
   }
 
 }

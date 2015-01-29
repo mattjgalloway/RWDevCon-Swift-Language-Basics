@@ -14,6 +14,40 @@ This takes a tuple describing the last move – where the play was, and who play
 
 If there was a win, then show an alert indicating who won. If there was not a win, but there are all 9 moves taken, then show an alert that nobody has won. On both these alerts, make it so that the refresh method you added previously gets called when the alert is dismissed.
 
+**Hint:** Here are the functions you will need to present alerts for when a game has been won or has finished without a winner:
+
+```
+private func showGameWon(player: Player) {
+  println("Winner!")
+
+  var playerString = ""
+  switch player {
+  case .X:
+    playerString = "X"
+  case .O:
+    playerString = "O"
+  }
+
+  let alert = UIAlertController(title: "Winner!", message: "\(playerString) has won", preferredStyle: .Alert)
+  alert.addAction(UIAlertAction(title: "New Game", style: .Default) {
+    (alert: UIAlertAction!) -> Void in
+    self.reset()
+    })
+  self.presentViewController(alert, animated: true, completion: nil)
+}
+
+private func showGameEnd() {
+  println("Game end - no winner")
+
+  let alert = UIAlertController(title: "Too bad", message: "No winner", preferredStyle: .Alert)
+  alert.addAction(UIAlertAction(title: "New Game", style: .Default) {
+    (alert: UIAlertAction!) -> Void in
+    self.reset()
+    })
+  self.presentViewController(alert, animated: true, completion: nil)
+}
+```
+
 Finally, in `board(board:didPressPosition:)`, call `checkEnd(lastMove:)` when the move has been played.
 
 Good luck, and no peeking at the answer until you’ve finished it!

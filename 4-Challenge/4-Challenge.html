@@ -34,6 +34,37 @@ body{-webkit-font-smoothing:antialiased;font-family:"Helvetica Neue",Helvetica,A
 
 <p>If there was a win, then show an alert indicating who won. If there was not a win, but there are all 9 moves taken, then show an alert that nobody has won. On both these alerts, make it so that the refresh method you added previously gets called when the alert is dismissed.</p>
 
+<p><strong>Hint:</strong> Here are the functions you will need to present alerts for when a game has been won or has finished without a winner:</p>
+<pre><code class="(null)">private func showGameWon(player: Player) {
+  println(&quot;Winner!&quot;)
+
+  var playerString = &quot;&quot;
+  switch player {
+  case .X:
+    playerString = &quot;X&quot;
+  case .O:
+    playerString = &quot;O&quot;
+  }
+
+  let alert = UIAlertController(title: &quot;Winner!&quot;, message: &quot;\(playerString) has won&quot;, preferredStyle: .Alert)
+  alert.addAction(UIAlertAction(title: &quot;New Game&quot;, style: .Default) {
+    (alert: UIAlertAction!) -&gt; Void in
+    self.reset()
+    })
+  self.presentViewController(alert, animated: true, completion: nil)
+}
+
+private func showGameEnd() {
+  println(&quot;Game end - no winner&quot;)
+
+  let alert = UIAlertController(title: &quot;Too bad&quot;, message: &quot;No winner&quot;, preferredStyle: .Alert)
+  alert.addAction(UIAlertAction(title: &quot;New Game&quot;, style: .Default) {
+    (alert: UIAlertAction!) -&gt; Void in
+    self.reset()
+    })
+  self.presentViewController(alert, animated: true, completion: nil)
+}</code></pre>
+
 <p>Finally, in <code>board(board:didPressPosition:)</code>, call <code>checkEnd(lastMove:)</code> when the move has been played.</p>
 
 <p>Good luck, and no peeking at the answer until you’ve finished it!</p>

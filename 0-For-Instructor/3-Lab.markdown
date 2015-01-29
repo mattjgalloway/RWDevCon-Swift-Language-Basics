@@ -6,7 +6,11 @@ In this short lab and challenge, you will make a Tic Tac Toe game in Swift. You�
 
 ### A Starter for 10
 
-In the resources for this session, you will find a starter project in the **2-Demo** directory. Open it up and take a look around. There’s a single view controller and a view for the Tic Tac Toe board. In this lab, you’re going to add all the functionality for playing a game of Tic Tac Toe.
+In the resources for this session, you will find a starter project in the **2-Demo** directory. Open it up and take a look around. Open up **Main.storyboard**. You will find a single view controller and on it, a view for the Tic Tac Toe board.
+
+Inside **Board.swift** you will find the view which draws the Tic Tac Toe board. You'll be adding to this during this lab.
+
+In this lab, you’re going to add all the functionality for playing a game of Tic Tac Toe.
 
 In the playground demo, you were introduced to the data structures that the game requires. They’re not in this app yet, so it’s time to add them. Click **File\New\File…**. Then select **iOS\Swift File** and click **Next**. Call the file **DataStructures.swift**, and save it in the project directory.
 
