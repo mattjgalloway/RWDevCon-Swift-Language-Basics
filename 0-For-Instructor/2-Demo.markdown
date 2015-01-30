@@ -95,19 +95,19 @@ This is a Dictionary in Swift. This is a `Dictionary` from `String` to `Int`.
 Type:
 
     let animal: String = "Dog"
-    let numberOfAnimal: Int? = farmAnimals[animal]
+    let numberOfAnimals: Int? = farmAnimals[animal]
 
 Here we're accessing the Dictionary through its subscript to obtain the value for a given key, which is an optional because a value may not exist for that key.
 
 Type:
 
-    println("I have \(numberOfAnimal) \(animal)s")
+    println("I have \(numberOfAnimals) \(animal)s")
 
 This prints `"I have Optional(2) Dogs"` because the value returned from the subscript is an optional.
 
 Type:
 
-    println("I have \(numberOfAnimal!) \(animal)s")
+    println("I have \(numberOfAnimals!) \(animal)s")
 
 This is forced unwrapping of the optional. This means that the optional's value is taken instead of the optional itself.
 
@@ -119,16 +119,16 @@ All hell breaks loose because the optional is now its 'nil' case, and it tries t
 
 Wrap the println like so:
 
-    if numberOfAnimal != nil {
-      println("I have \(numberOfAnimal!) \(animal)s")
+    if numberOfAnimals != nil {
+      println("I have \(numberOfAnimals!) \(animal)s")
     }
 
 This fixes the problem, but we can do better. We can use optional binding to make things a lot cleaner.
 
 Type:
 
-    if let numberOfAnimal: Int = animalCounts[animal] {
-      println("I have \(numberOfAnimal) \(animal)s")
+    if let numberOfAnimals: Int = farmAnimals[animal] {
+      println("I have \(numberOfAnimals) \(animal)s")
     }
 
 This sets a variable called 'count' local to the if-statement. The if-statement will only enter if 'count' is non-nil. Inside the if-statement, 'count' can be used as the unwrapped optional - i.e. it's not an optional in here. It's the concrete value.

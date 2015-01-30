@@ -15,7 +15,7 @@ body{-webkit-font-smoothing:antialiased;font-family:"Helvetica Neue",Helvetica,A
 </style>
 
 </head>
-<body class="normal">
+<body class="normal firstload">
   <div id="wrapper">
       <h1 id="201:swiftlanguagebasicspart2:demoinstructions">201: Swift Language Basics, Part 2: Demo Instructions</h1>
 
@@ -127,21 +127,21 @@ optionalString = nil
 <p>Type:</p>
 
 <pre><code>let animal: String = &quot;Dog&quot;  
-let numberOfAnimal: Int? = farmAnimals[animal]
+let numberOfAnimals: Int? = farmAnimals[animal]
 </code></pre>
 
 <p>Here we&#8217;re accessing the Dictionary through its subscript to obtain the value for a given key, which is an optional because a value may not exist for that key.</p>
 
 <p>Type:</p>
 
-<pre><code>println(&quot;I have \(numberOfAnimal) \(animal)s&quot;)
+<pre><code>println(&quot;I have \(numberOfAnimals) \(animal)s&quot;)
 </code></pre>
 
 <p>This prints <code>&quot;I have Optional(2) Dogs&quot;</code> because the value returned from the subscript is an optional.</p>
 
 <p>Type:</p>
 
-<pre><code>println(&quot;I have \(numberOfAnimal!) \(animal)s&quot;)
+<pre><code>println(&quot;I have \(numberOfAnimals!) \(animal)s&quot;)
 </code></pre>
 
 <p>This is forced unwrapping of the optional. This means that the optional&#8217;s value is taken instead of the optional itself.</p>
@@ -155,8 +155,8 @@ let numberOfAnimal: Int? = farmAnimals[animal]
 
 <p>Wrap the println like so:</p>
 
-<pre><code>if numberOfAnimal != nil {  
-  println(&quot;I have \(numberOfAnimal!) \(animal)s&quot;)  
+<pre><code>if numberOfAnimals != nil {  
+  println(&quot;I have \(numberOfAnimals!) \(animal)s&quot;)  
 }
 </code></pre>
 
@@ -164,8 +164,8 @@ let numberOfAnimal: Int? = farmAnimals[animal]
 
 <p>Type:</p>
 
-<pre><code>if let numberOfAnimal: Int = animalCounts[animal] {  
-  println(&quot;I have \(numberOfAnimal) \(animal)s&quot;)  
+<pre><code>if let numberOfAnimals: Int = farmAnimals[animal] {  
+  println(&quot;I have \(numberOfAnimals) \(animal)s&quot;)  
 }
 </code></pre>
 
