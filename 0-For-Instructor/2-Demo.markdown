@@ -142,8 +142,8 @@ This is a tuple. It’s a collection of values in a lightweight data structure. 
 
 Type:
 
-    let namedTuple: (a: String, b: Int) = ("RWDevCon", 180)
-    println("\(namedTuple.a), \(namedTuple.b)")
+    let namedTuple: (foo: String, bar: Int) = ("RWDevCon", 180)
+    println("\(namedTuple.foo), \(namedTuple.bar)")
 
 You can also name the values of a tuple.
 
